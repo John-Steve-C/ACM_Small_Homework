@@ -1,0 +1,1 @@
+/usr/bin/c++   -fsanitize=undefined -fsanitize=address -Wall -g   CMakeFiles/untitled.dir/Sixth/Inherit_pointer.cpp.o  -o untitled 

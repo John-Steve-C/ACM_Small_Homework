@@ -1,0 +1,45 @@
+2
+move back add add_carry end
+move
+end
+1 0 0 1 1 0 1
+
+move
+0 * ; 0 ; > - ; add
+1 * ; 0 ; > - ; add
+0 1 ; 1 ; > - ; add
+0 0 ; 0 ; > - ; add
+1 0 ; 0 ; > - ; add
+1 1 ; 1 ; > - ; add
+* * ; * ; - - ; end
+* 1 ; 1 ; - - ; end
+* 0 ; 0 ; - - ; end
+
+add
+0 0 ; 1 ; - - ; move
+1 0 ; 1 ; - - ; move
+* 0 ; 1 ; - - ; end
+0 1 ; 0 ; - < ; add_carry
+1 1 ; 0 ; - < ; add_carry
+* 1 ; 0 ; - < ; add_carry
+0 * ; * ; - < ; add_carry
+1 * ; * ; - < ; add_carry
+
+add_carry
+* * ; 1 ; - - ; end
+* 0 ; 1 ; - - ; end
+0 0 ; 1 ; - - ; back
+0 1 ; 0 ; - < ; add_carry
+* 1 ; 0 ; - < ; add_carry
+1 0 ; 1 ; - - ; back
+1 1 ; 0 ; - < ; add_carry
+0 * ; 1 ; - - ; back
+1 * ; 1 ; - - ; back
+
+back
+0 0 ; 0 ; - > ; back
+0 1 ; 1 ; - > ; back
+1 0 ; 0 ; - > ; back
+1 1 ; 1 ; - > ; back
+0 * ; * ; - < ; move
+1 * ; * ; - < ; move
